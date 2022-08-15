@@ -1,0 +1,16 @@
+@use '../../../assets/scss/utilities' as util;
+@use '../../../assets/scss/mixins' as mixin;
+
+.form-control {
+  border: util.toRem(1) solid var(--accent-300);
+  outline: none;
+  width: 100%;
+  border-radius: util.toRem(8);
+  resize: none;
+  padding: util.toRem(20);
+  color: var(--secondary-300);
+  font-size: util.toRem(15);
+  letter-spacing: util.toRem(0.01);
+  overflow: hidden;
+  @include mixin.gray-scrollbar();
+}

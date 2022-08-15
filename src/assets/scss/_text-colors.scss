@@ -1,0 +1,69 @@
+.text {
+  &-primary {
+    &-100 {
+      color: var(--primary-100);
+    }
+    &-200 {
+      color: var(--primary-200);
+    }
+    &-300 {
+      color: var(--primary-300);
+    }
+  }
+
+  &-secondary {
+    &-100 {
+      color: var(--secondary-100);
+    }
+    &-200 {
+      color: var(--secondary-200);
+    }
+    &-300 {
+      color: var(--secondary-300);
+    }
+  }
+
+  &-accent {
+    &-100 {
+      color: var(--accent-100);
+    }
+    &-200 {
+      color: var(--accent-200);
+    }
+    &-300 {
+      color: var(--accent-300);
+    }
+  }
+
+  &-lemon {
+    &-100 {
+      color: var(--lemon-100);
+    }
+    &-200 {
+      color: var(--lemon-200);
+    }
+    &-300 {
+      color: var(--lemon-300);
+    }
+  }
+
+  &-tonic {
+    color: crimson;
+  }
+
+  &-default {
+    &-contrast {
+      color: var(--default-contrast);
+    }
+    &-background {
+      color: var(--default-background);
+
+      &-light {
+        color: var(--default-background-light);
+      }
+    }
+    &-text {
+      color: var(--default-text);
+    }
+  }
+}

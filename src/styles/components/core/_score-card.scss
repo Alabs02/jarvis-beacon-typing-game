@@ -1,0 +1,36 @@
+@use '../../../assets/scss/utilities' as util;
+@use '../../../assets/scss/mixins' as mix;
+
+.score-card {
+  width: 50%;
+  height: util.toRem(100);
+  border-radius: util.toRem(8);
+  margin-bottom: util.toRem(10);
+  background: var(--default-background-light);
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  display: grid;
+  place-items: center;
+  @include mix.boxShadow(default, var(--primary-300));
+
+  &__copy {
+    text-transform: uppercase;
+    font-size: util.toRem(14);
+    letter-spacing: 1pt;
+  }
+
+  &__score {
+    font-size: util.toRem(30);
+
+    &--tonic {
+      color: crimson;
+    }
+
+    &--lemon {
+      color: #adf802;
+    }
+  }
+}

@@ -1,0 +1,64 @@
+@use '../../../assets/scss/utilities' as util;
+@use '../../../assets/scss/breakpoints' as *;
+
+
+.app-bar {
+  width: 100%;
+  height: util.toRem(80);
+  background-color: var(--default-background-light);
+
+  display: flex;
+  align-items: center;
+  padding: util.toRem(20);
+
+  &__brand {
+    width: 30%;
+    height: util.toRem(40);
+    position: relative;
+    overflow: hidden;
+
+    display: grid;
+    place-items: center;
+    
+    &-logo,
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+
+  &__title {
+    font-size: util.toRem(24);
+  }
+}
+
+@include breakpoint-up(lg) {
+  .app-bar {
+    padding: util.toRem(20) util.toRem(40);
+
+    &__brand {
+      width: 10%;
+      height: util.toRem(50);
+    }
+
+    &__title {
+      font-size: util.toRem(30);
+    }
+  }
+}
+
+@include breakpoint-up(xl) {
+  .app-bar {
+    padding: util.toRem(20) util.toRem(40);
+
+    &__brand {
+      width: 12%;
+      height: util.toRem(50);
+    }
+
+    &__title {
+      font-size: util.toRem(30);
+    }
+  }
+}

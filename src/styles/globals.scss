@@ -1,0 +1,15 @@
+// LIBRARY
+@forward '../assets/scss/app.scss';
+
+// NAVIGATION
+@forward './components/navigation/app-bar';
+
+// CORE
+@forward './components/core/start-challenge';
+@forward './components/core/score-card';
+
+// FORMS
+@forward './components/forms/forms';
+
+// PAGES
+@forward './pages/home';

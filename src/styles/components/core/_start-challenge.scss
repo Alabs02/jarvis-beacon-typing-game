@@ -1,0 +1,261 @@
+@use '../../../assets/scss/utilities' as util;
+@use '../../../assets/scss/mixins' as mix;
+@use '../../../assets/scss/breakpoints' as *;
+
+.alert {
+  padding: util.toRem(10);
+  border-radius: util.toRem(8);
+  font-size: util.toRem(14);
+  overflow: hidden;
+  text-align: center;
+
+  &__accent {
+    background: var(--accent-300);
+    color: var(--default-contrast);
+  }
+
+  &__tonic {
+    background: crimson;
+    color: var(--default-contrast);
+  }
+
+  &__primary {
+    background: var(--primary-300);
+    color: var(--default-contrast);
+  }
+}
+
+.quote-box {
+  background: var(--default-text);
+  padding: util.toRem(20);
+  border-radius: util.toRem(8);
+  overflow: hidden;
+  position: relative;
+  @include mix.boxShadow(default, var(--default-contrast));
+
+
+  &--active {
+    color: var(--default-contrast);
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: 1.2rem;
+      height: .2rem;
+      background: var(--default-contrast);
+      left: 1.20rem;
+      top: 4.0rem;
+      animation: flash .2s infinite;
+      -webkit-animation: flash .2s infinite;
+    }
+  }
+
+  &--inactive {
+    color: crimson;
+  }
+
+  &__copy {
+    color: var(--accent-300);
+    letter-spacing: 0.8pt;
+    text-justify: newspaper;
+    font-size: util.toRem(16);
+  }
+
+  &__author {
+    color: var(--secondary-300);
+    font-size: util.toRem(13);
+    letter-spacing: 1pt;
+  }
+
+  &__muted {
+    @extend .quote-box__copy;
+    color: var(--secondary-300);
+  }
+
+  &__mono {
+    font-family: "Cutive Mono", "Courier New", monospace;
+  }
+
+  &__input {
+    position: relative;
+    white-space: pre;
+    overflow: hidden;
+    display: inline-block;
+    width: 100%;
+    font-size: util.toRem(18);
+    color: var(--default-contrast);
+    min-height: util.toRem(80);
+  }
+}
+
+@include breakpoint-up(md) {
+  .quote-box {
+    &__copy {
+      font-size: util.toRem(18);
+    }
+
+    &__author {
+      font-size: util.toRem(14);
+    }
+  }
+}
+
+.btn {
+  height: util.toRem(80);
+  width: util.toRem(80);
+  border-radius: 50%;
+  outline: none;
+  border: none;
+  cursor: pointer !important;
+  transition: all 0.3s ease;
+
+  &:hover,
+  &:focus {
+    transform: scale(1.05);
+  } 
+
+  &--nopointer {
+    cursor: none;
+  }
+
+  &-success {
+    border-width: util.toRem(1);
+    border-style: solid;
+    border-color: var(--lemon-300);
+    background: var(--default-contrast);
+
+    * {
+      color: var(--lemon-300);
+    }
+
+    &:hover,
+    &:focus {
+      background: var(--lemon-300);
+      * {
+        color: var(--default-contrast);
+      }
+    }
+  }
+
+  &-tonic {
+    border-width: util.toRem(1);
+    border-style: solid;
+    border-color: crimson;
+    background: var(--default-contrast);
+
+    * {
+      color: crimson;
+    }
+
+    &:hover,
+    &:focus {
+      background: crimson;
+
+      * {
+        color: var(--default-contrast);
+      }
+    }
+  }
+
+    &-accent {
+      border-width: util.toRem(1);
+      border-style: solid;
+      border-color: var(--accent-300);
+      background: var(--default-contrast);
+  
+      * {
+        color: var(--accent-300);
+      }
+  
+      &:hover,
+      &:focus {
+        background: var(--accent-300);
+  
+        * {
+          color: var(--default-contrast);
+        }
+      }
+    }
+}
+
+@keyframes border-pulse {
+  0% {
+    box-shadow: 0px 0px 15px 0px rgba(138, 33, 33, 0.575);
+  }
+
+  50% {
+    box-shadow: 0px 0px 1px 0px rgba(0, 0, 0, 0);
+  }
+
+  100% {
+    box-shadow: 0px 0px 15px 0px rgba(138, 33, 33, 0.575);
+  }
+}
+
+@keyframes flashing {
+  0% {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+
+    opacity: 0.0;
+  }
+
+  20% {
+    -webkit-transform: scale(0.2);
+    transform: scale(0.2);
+    opacity: 0.2;
+  }
+
+  40% {
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5);
+    opacity: 0.5;
+  }
+
+  60% {
+    -webkit-transform: scale(0.7);
+    transform: scale(0.7);
+    opacity: 0.7;
+  }
+
+  80% {
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9);
+    background-color: rgba(85, 85, 85, 0.247);
+    opacity: 0.2;
+  }
+
+  100% {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+    opacity: 0.0;
+  }
+}
+
+@-webkit-keyframes flash {
+  0% {
+    background: #fff;
+  }
+
+  50% {
+    background: #ff9999;
+  }
+
+  100% {
+    background: #fff;
+  }
+}
+
+@keyframes flash {
+  0% {
+    background: #fff;
+  }
+
+  50% {
+    background: #ff9999;
+  }
+
+  100% {
+    background: #fff;
+  }
+}
