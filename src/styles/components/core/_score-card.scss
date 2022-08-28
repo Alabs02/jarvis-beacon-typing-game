@@ -26,11 +26,15 @@
     font-size: util.toRem(30);
 
     &--tonic {
-      color: crimson;
+      color: crimson !important;
+    }
+
+    &--accent {
+      color: var(--accent-300) !important;
     }
 
     &--lemon {
-      color: #adf802;
+      color: var(--lemon-300) !important;
     }
   }
 }

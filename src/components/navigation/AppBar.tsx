@@ -23,6 +23,6 @@ const AppBar = () => {
       </div>
     </Fragment>
   );
-}
+};
 
 export { AppBar as default };

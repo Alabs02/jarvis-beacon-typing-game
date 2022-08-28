@@ -12,7 +12,7 @@ const initialState: IQuoteState = {
   loading: false,
   payload: jsonData.data || [],
   allowedKeys: jsonAllowedKeys.keys || [],
-  error: 'An error occurred, please try again!'
+  error: 'An error occurred, please try again!',
 };
 
 export const quoteSlice = createSlice({
@@ -29,14 +29,10 @@ export const quoteSlice = createSlice({
 
     setError: (state, { payload }: PayloadAction<string>) => {
       state.error = payload;
-    }
-  }
+    },
+  },
 });
 
 export const quoteReducer = quoteSlice.reducer;
 
-export const {
-  setLoading,
-  setPayload,
-  setError
-} = quoteSlice.actions;
+export const { setLoading, setPayload, setError } = quoteSlice.actions;

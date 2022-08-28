@@ -15,12 +15,20 @@
   }
 
   @if ($size==lg) {
-    box-shadow: 0 toRem(10) toRem(15) toRem(-3) rgba($color: $color, $alpha: 0.1),
+    box-shadow: 0
+        toRem(10)
+        toRem(15)
+        toRem(-3)
+        rgba($color: $color, $alpha: 0.1),
       0 4px 6px -4px rgba($color: $color, $alpha: 0.1);
   }
 
   @if ($size==xl) {
-    box-shadow: 0 toRem(20) toRem(25) toRem(-5) rgba($color: $color, $alpha: 0.1),
+    box-shadow: 0
+        toRem(20)
+        toRem(25)
+        toRem(-5)
+        rgba($color: $color, $alpha: 0.1),
       0 8px 10px -6px rgba($color: $color, $alpha: 0.1);
   }
 }

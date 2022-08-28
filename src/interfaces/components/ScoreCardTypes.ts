@@ -1,6 +1,6 @@
 export interface IScoreCard {
   copy: string;
   score: number;
-  styles?: Object | unknown;
+  styles?: Object;
   symbol?: string;
 }

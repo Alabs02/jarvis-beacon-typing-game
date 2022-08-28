@@ -19,7 +19,7 @@ const JarvisBeaconApp = ({ Component, pageProps }: AppProps) => {
     <Provider store={store}>
       <PersistGate loading={<div />} persistor={persistor}>
         <MaterialToastConfig />
-        
+
         <SafeHydrate>
           <ErrorBoundary>
             <Component {...pageProps} />
@@ -28,6 +28,6 @@ const JarvisBeaconApp = ({ Component, pageProps }: AppProps) => {
       </PersistGate>
     </Provider>
   );
-}
+};
 
 export { JarvisBeaconApp as default };

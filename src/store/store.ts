@@ -44,17 +44,17 @@ const store = configureStore({
   middleware: (getDefaultMiddleware) =>
     devMode
       ? getDefaultMiddleware({
-        thunk: true,
-        serializableCheck: {
-          ignoredActions: [FLUSH, REHYDRATE, REGISTER, PURGE, PAUSE, PERSIST],
-        },
-      }).concat(logger)
+          thunk: true,
+          serializableCheck: {
+            ignoredActions: [FLUSH, REHYDRATE, REGISTER, PURGE, PAUSE, PERSIST],
+          },
+        }).concat(logger)
       : getDefaultMiddleware({
-        thunk: true,
-        serializableCheck: {
-          ignoredActions: [FLUSH, REHYDRATE, REGISTER, PURGE, PAUSE, PERSIST],
-        },
-      }),
+          thunk: true,
+          serializableCheck: {
+            ignoredActions: [FLUSH, REHYDRATE, REGISTER, PURGE, PAUSE, PERSIST],
+          },
+        }),
 });
 
 export const persistor = persistStore(store);

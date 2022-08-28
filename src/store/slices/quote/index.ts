@@ -4,5 +4,5 @@ export {
   setLoading,
   setPayload,
   quoteReducer,
-  quoteSlice
+  quoteSlice,
 } from './slice';

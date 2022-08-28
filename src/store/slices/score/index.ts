@@ -1,11 +1,3 @@
-export type {
-  IScore,
-  IScoreState
-} from './types';
+export type { IScore, IScoreState } from './types';
 
-export {
-  scoreReducer,
-  scoreSlice,
-  setPayload,
-  updateScore
-} from './slice';
+export { scoreReducer, scoreSlice, setPayload, updateScore } from './slice';

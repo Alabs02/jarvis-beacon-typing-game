@@ -1,11 +1,9 @@
 import React, { Fragment } from 'react';
 import { NextPage } from 'next';
 
-
 // COMPONENTS
 import { AppBar } from '@/components/navigation';
 import { StartChallenge } from '@/components/core';
-
 
 const HomePage: NextPage = () => {
   return (
@@ -17,6 +15,6 @@ const HomePage: NextPage = () => {
       </main>
     </Fragment>
   );
-}
+};
 
 export default HomePage;

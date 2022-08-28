@@ -9,7 +9,8 @@
   box-sizing: border-box;
   text-decoration: none;
   white-space: normal;
-  transition: background transform border-radius box-shadow font-size 0.3s ease-in-out;
+  transition: background transform border-radius box-shadow font-size 0.3s
+    ease-in-out;
   font-family: 'Georama', sans-serif;
   z-index: 2;
 }
@@ -84,7 +85,7 @@ ol {
 
 a {
   text-decoration: none !important;
-  color: var(--accent-300)  !important;
+  color: var(--accent-300) !important;
 
   // &:focus,
   // &:visited,

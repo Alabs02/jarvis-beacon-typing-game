@@ -6,7 +6,7 @@ import { scoreReducer } from './slices/score';
 
 const rootReducer = combineReducers({
   quote: quoteReducer,
-  score: scoreReducer
+  score: scoreReducer,
 });
 
 export { rootReducer as default };

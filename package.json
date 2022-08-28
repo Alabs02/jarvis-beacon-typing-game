@@ -8,8 +8,8 @@
     "start": "next start",
     "lint": "next lint",
     "cypress": "cypress open",
-    "format": "prettier --check \"src/**/*.{ts,tsx,md,scss}\" .gitignore .",
-    "format:fix": "prettier --write \"src/**/*.{ts,tsx,md,scss}\" .gitignore .",
+    "format": "prettier --check \"src/**/*.{ts,tsx,md,scss}\"",
+    "format:fix": "prettier --write \"src/**/*.{ts,tsx,md,scss}\"",
     "eslint-fix": "eslint --fix \"src/**/*.{ts,tsx,md,scss}\""
   },
   "dependencies": {

@@ -8,7 +8,7 @@
   --secondary-100: hsl(0, 0%, 91%);
   --secondary-200: hsl(0, 0%, 85%);
   --secondary-300: hsl(0, 0%, 65%);
-  
+
   // ORANGE COLOR
   --accent-100: hsl(32, 90%, 78%);
   --accent-200: hsl(32, 90%, 68%);
@@ -26,8 +26,7 @@
   --default-text: hsl(26, 37%, 4%);
 }
 
-
-:root[data-theme="dark"] {
+:root[data-theme='dark'] {
   // PRIMARY COLORS
   --primary-100: hsl(238, 83%, 32%);
   --primary-200: hsl(238, 83%, 24%);
@@ -37,7 +36,7 @@
   --secondary-100: hsl(0, 0%, 91%);
   --secondary-200: hsl(0, 0%, 85%);
   --secondary-300: hsl(0, 0%, 65%);
-  
+
   // ORANGE COLOR
   --accent-100: hsl(0, 100%, 84%);
   --accent-200: hsl(0, 100%, 74%);

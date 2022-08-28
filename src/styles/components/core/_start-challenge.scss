@@ -33,25 +33,26 @@
   position: relative;
   @include mix.boxShadow(default, var(--default-contrast));
 
-
   &--active {
     color: var(--default-contrast);
+    box-shadow: 0 0 util.toRem(2) util.toRem(2) rgb(41, 202, 46);
 
     &::after {
       content: '';
       position: absolute;
       width: 1.2rem;
-      height: .2rem;
+      height: 0.2rem;
       background: var(--default-contrast);
-      left: 1.20rem;
-      top: 4.0rem;
-      animation: flash .2s infinite;
-      -webkit-animation: flash .2s infinite;
+      left: 1.2rem;
+      top: 4rem;
+      animation: flash 0.2s infinite;
+      -webkit-animation: flash 0.2s infinite;
     }
   }
 
   &--inactive {
     color: crimson;
+    box-shadow: 0 0 util.toRem(2) util.toRem(2) rgb(190, 25, 25);
   }
 
   &__copy {
@@ -73,7 +74,7 @@
   }
 
   &__mono {
-    font-family: "Cutive Mono", "Courier New", monospace;
+    font-family: 'Cutive Mono', 'Courier New', monospace;
   }
 
   &__input {
@@ -112,7 +113,7 @@
   &:hover,
   &:focus {
     transform: scale(1.05);
-  } 
+  }
 
   &--nopointer {
     cursor: none;
@@ -157,25 +158,25 @@
     }
   }
 
-    &-accent {
-      border-width: util.toRem(1);
-      border-style: solid;
-      border-color: var(--accent-300);
-      background: var(--default-contrast);
-  
+  &-accent {
+    border-width: util.toRem(1);
+    border-style: solid;
+    border-color: var(--accent-300);
+    background: var(--default-contrast);
+
+    * {
+      color: var(--accent-300);
+    }
+
+    &:hover,
+    &:focus {
+      background: var(--accent-300);
+
       * {
-        color: var(--accent-300);
-      }
-  
-      &:hover,
-      &:focus {
-        background: var(--accent-300);
-  
-        * {
-          color: var(--default-contrast);
-        }
+        color: var(--default-contrast);
       }
     }
+  }
 }
 
 @keyframes border-pulse {
@@ -197,7 +198,7 @@
     -webkit-transform: scale(0);
     transform: scale(0);
 
-    opacity: 0.0;
+    opacity: 0;
   }
 
   20% {
@@ -228,7 +229,7 @@
   100% {
     -webkit-transform: scale(1.1);
     transform: scale(1.1);
-    opacity: 0.0;
+    opacity: 0;
   }
 }
 

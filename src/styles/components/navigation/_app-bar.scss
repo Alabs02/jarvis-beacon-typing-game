@@ -1,7 +1,6 @@
 @use '../../../assets/scss/utilities' as util;
 @use '../../../assets/scss/breakpoints' as *;
 
-
 .app-bar {
   width: 100%;
   height: util.toRem(80);
@@ -19,7 +18,7 @@
 
     display: grid;
     place-items: center;
-    
+
     &-logo,
     img {
       width: 100%;
